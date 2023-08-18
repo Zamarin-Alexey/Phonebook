@@ -57,7 +57,7 @@ def add_record(phonebook: list[dict]) -> None:
 # Бинарный поиск записи по id
 def bin_search(phonebook: list[dict], record_id: int) -> int:
     l, r = 0, len(phonebook) - 1
-    while l < r:
+    while l <= r:
         m = (l + r) // 2
         r_id = phonebook[m]['record_id']
         if r_id > record_id:
